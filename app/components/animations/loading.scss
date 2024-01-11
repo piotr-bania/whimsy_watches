@@ -1,0 +1,19 @@
+@import '../../globals.scss';
+
+.loader {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        color: $primary;
+        font-family: $header_font;
+        font-size: $paragraph;
+        text-transform: uppercase;
+        line-height: 1;
+        opacity: 1;
+    }
+}

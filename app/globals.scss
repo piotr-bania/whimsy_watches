@@ -1,0 +1,124 @@
+/* ------------------------------ Fonts ------------------------------ */
+@font-face {
+    font-family: 'Aileron_Black';
+    src: url(../public/fonts/Aileron_Black.otf);
+}
+
+@font-face {
+    font-family: 'Aileron_Regular';
+    src: url(../public/fonts/Aileron_Regular.otf);
+}
+
+@font-face {
+    font-family: 'Basement_Grotesque_Black';
+    src: url(../public/fonts/Basement_Grotesque_Black.otf);
+}
+
+$header_font: 'Basement_Grotesque_Black',
+sans-serif;
+$cta_font: 'Aileron_Black',
+sans-serif;
+$text_font: 'Aileron_Regular',
+sans-serif;
+
+/* ------------------------------ Variables  ------------------------------ */
+$primary: #0A192F;
+$accent: #D4AF37;
+$off_white: #F0EDE5;
+
+$link: clamp(1rem, 0.54vw + 0.86rem, 1.41rem);
+$paragraph: clamp(1.25rem, 0.83vw + 1.04rem, 1.88rem);
+$header_4: clamp(1.56rem, 1.25vw + 1.25rem, 2.5rem);
+$header_3: clamp(1.95rem, 1.84vw + 1.49rem, 3.33rem);
+$header_2: clamp(2.44rem, 2.67vw + 1.77rem, 4.44rem);
+$header_1: clamp(3.05rem, 3.82vw + 2.1rem, 5.92rem);
+
+$small: clamp(0.3125rem, 0.2038rem + 0.5435vw, 0.625rem);
+$medium: clamp(0.625rem, 0.4076rem + 1.087vw, 1.25rem);
+$large: clamp(0.9375rem, 0.6114rem + 1.6304vw, 1.875rem);
+
+$background-size: 96px;
+$line-color: #0A192F10;
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ------------------------------ Defaults ------------------------------ */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    animation: fadeIn 1s ease-out forwards;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    list-style-type: none;
+}
+
+body {
+    background: $off_white;
+    background-image: 
+    linear-gradient($line-color 1px, transparent 1px), 
+    linear-gradient(90deg, $line-color 1px, transparent 1px);
+    background-size: $background-size $background-size;
+    color: $primary;
+    font-family: $text_font;
+    font-size: $paragraph;
+    line-height: 1.1;
+    margin: auto;
+    user-select: none;
+    overflow: hidden;
+}
+
+h1 {
+    color: $primary;
+    font-family: $header_font;
+    font-size: $header_1;
+    line-height: 1;
+    text-transform: uppercase;
+    margin: 0;
+    text-shadow: 0 6px 12px #00000025;
+}
+
+p {
+    color: $primary;
+    font-family: $text_font;
+    font-size: $paragraph;
+    opacity: 0.6;
+    margin: 0;
+}
+
+a,
+.link {
+    color: $accent;
+    font-family: $text_font;
+    font-size: $link;
+    text-transform: uppercase;
+    text-decoration: none;
+    // text-shadow: 0 6px 12px #0A192F25;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+        opacity: 0.75;
+    }
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 12px 48px #00000075;
+}
+
+/* ------------------------------ Sections ------------------------------ */
+section {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+        gap: $large;
+    }
+}

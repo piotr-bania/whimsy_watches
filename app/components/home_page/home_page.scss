@@ -1,0 +1,29 @@
+@import '../../globals.scss';
+
+#home_page {
+    position: absolute;
+    bottom: 15%;
+    height: max-content;
+
+    .container {
+        padding: $large calc($large * 2);
+
+        .heading {
+            grid-area: 1 / 2 / 2 / 8;
+        }
+
+        .paragraph {
+            grid-area: 2 / 2 / 3 / 6;
+        }
+
+        .link {
+            grid-area: 3 / 2 / 4 / 6;
+            display: flex;
+            justify-content: flex-end;
+
+            a {
+                font-size: $paragraph;
+            }
+        }
+    }
+}
