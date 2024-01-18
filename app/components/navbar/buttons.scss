@@ -21,7 +21,7 @@
         position: absolute;
         top: 0;
         right: 0;
-        box-shadow: -6px 6px 24px #00000075;
+        box-shadow: $shadow_button_top;
         transition: all 0.5s ease-in-out;
     }
 
@@ -29,7 +29,7 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        box-shadow: -6px -6px 24px #00000075;
+        box-shadow: $shadow_button_bottom;
     }
 
     @keyframes float {

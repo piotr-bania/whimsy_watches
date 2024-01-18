@@ -1,10 +1,5 @@
 /* ------------------------------ Fonts ------------------------------ */
 @font-face {
-    font-family: 'Aileron_Black';
-    src: url(../public/fonts/Aileron_Black.otf);
-}
-
-@font-face {
     font-family: 'Aileron_Regular';
     src: url(../public/fonts/Aileron_Regular.otf);
 }
@@ -16,8 +11,6 @@
 
 $header_font: 'Basement_Grotesque_Black',
 sans-serif;
-$cta_font: 'Aileron_Black',
-sans-serif;
 $text_font: 'Aileron_Regular',
 sans-serif;
 
@@ -28,22 +21,17 @@ $off_white: #F0EDE5;
 
 $link: clamp(1rem, 0.54vw + 0.86rem, 1.41rem);
 $paragraph: clamp(1.25rem, 0.83vw + 1.04rem, 1.88rem);
-$header_4: clamp(1.56rem, 1.25vw + 1.25rem, 2.5rem);
-$header_3: clamp(1.95rem, 1.84vw + 1.49rem, 3.33rem);
-$header_2: clamp(2.44rem, 2.67vw + 1.77rem, 4.44rem);
 $header_1: clamp(3.05rem, 3.82vw + 2.1rem, 5.92rem);
 
-$small: clamp(0.3125rem, 0.2038rem + 0.5435vw, 0.625rem);
-$medium: clamp(0.625rem, 0.4076rem + 1.087vw, 1.25rem);
-$large: clamp(0.9375rem, 0.6114rem + 1.6304vw, 1.875rem);
+$spacing: clamp(0.9375rem, 0.6114rem + 1.6304vw, 1.875rem);
 
 $background-size: 96px;
 $line-color: #0A192F10;
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
+$shadow_small: 0 6px 12px #00000025;
+$shadow_large: 0 12px 48px #00000075;
+$shadow_button_top: -6px 6px 24px #00000075;
+$shadow_button_bottom: -6px -6px 24px #00000075;
 
 /* ------------------------------ Defaults ------------------------------ */
 * {
@@ -51,7 +39,6 @@ $line-color: #0A192F10;
 }
 
 html {
-    animation: fadeIn 1s ease-out forwards;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -80,7 +67,7 @@ h1 {
     line-height: 1;
     text-transform: uppercase;
     margin: 0;
-    text-shadow: 0 6px 12px #00000025;
+    text-shadow: $shadow_small;
 }
 
 p {
@@ -98,7 +85,6 @@ a,
     font-size: $link;
     text-transform: uppercase;
     text-decoration: none;
-    // text-shadow: 0 6px 12px #0A192F25;
     transition: all 0.5s ease-in-out;
 
     &:hover {
@@ -110,7 +96,7 @@ img {
     object-fit: cover;
     width: 100%;
     height: auto;
-    box-shadow: 0 12px 48px #00000075;
+    box-shadow: $shadow_large;
 }
 
 /* ------------------------------ Sections ------------------------------ */
@@ -119,6 +105,6 @@ section {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: auto;
-        gap: $large;
+        gap: $spacing;
     }
 }

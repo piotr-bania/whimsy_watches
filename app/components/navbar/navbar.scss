@@ -2,7 +2,7 @@
 
 #navbar {
     .container {
-        padding: $large calc($large * 2);
+        padding: $spacing calc($spacing * 2);
         justify-content: space-between;
         align-items: center;
 
@@ -27,7 +27,7 @@
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
-            column-gap: calc($large * 2);
+            column-gap: calc($spacing * 2);
         }
     }
 }
